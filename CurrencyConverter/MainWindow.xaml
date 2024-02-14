@@ -1,0 +1,31 @@
+﻿<Window x:Class="CurrencyConverter.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ResultWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Курсы валют:" FontWeight="Bold"/>
+            <ListBox x:Name="currencyListBox" SelectionMode="Single" MouseDoubleClick="CurrencyListBox_MouseDoubleClick">
+                <ListBoxItem Content="USD - 0.00 UAH"/>
+                <ListBoxItem Content="EUR - 0.00 UAH"/>
+                <ListBoxItem Content="GBP - 0.00 UAH"/>
+            </ListBox>
+
+            <TextBlock Text="Введите сумму в гривнах:" FontWeight="Bold" Margin="0,10,0,0"/>
+            <TextBox x:Name="amountInUAHTextBox" Margin="0,5,0,0" KeyDown="AmountInUAHTextBox_KeyDown"/>
+
+            <TextBlock Text="Отраженная сумма после обмена:" FontWeight="Bold" Margin="0,10,0,0"/>
+            <TextBlock x:Name="resultTextBlock" FontWeight="Bold" Margin="0,5,0,0"/>
+
+            
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button Content="Продолжить" Click="ContinueButton_Click" Margin="0,0,10,0"/>
+                <Button Content="Сохранить" Click="SaveButton_Click" Margin="0,0,10,0"/>
+                <Button Content="Завершить программу" Click="FinishButton_Click"/>
+               
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
